@@ -1,0 +1,35 @@
+#Reverse String
+
+"""Write a function that takes a string as input and returns
+    the string reversed.
+
+Example:
+Given s = "hello", return "olleh"
+"""
+string='hello'
+
+"""def reverseString1(string):
+    return(string[::-1])
+print(reverseString1(string))"""
+
+"""def reverseString2(string):
+    t=list(string)
+    n=len(t)
+    for i,j in zip(range(n-1,n//2,-1),range(n//2)):
+        t[i],t[j]=t[j],t[i]
+    return("".join(t))
+print(reverseString2(string))"""
+
+"""from collections import deque
+def reverseString3(string):
+    d =deque()
+    d.extendleft(string)
+    return(''.join(d))
+print(reverseString3(string))"""
+
+def reverseString4(string):
+    if len(string)<=1:
+        return(string)
+    return(reverseString4(string[1:])+string[0])
+print(reverseString4(string))
+

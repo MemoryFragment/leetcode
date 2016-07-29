@@ -1,2 +1,0 @@
-# leetcode
-python for leetcode
